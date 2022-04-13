@@ -1,34 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{ 
+/************** DEFAULT STYLING *****************/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border-radius: 1rem;
 }
 body {
   background-color: #d6d6d6;
-  letter-spacing: .034rem;
+  letter-spacing: 0.034rem;
+  padding: 1rem;
+
 }
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+textarea {
+  border: none;
+  resize: none;
+  border-radius: 0.5rem;
+  background-color: rgb(184, 244, 244);
+}
+textarea:focus {
+  outline: none;
+}
+/************** CONTAINER && HEADER *****************/
+.container {
+  padding: 1rem;
+  min-height: 100vh;
+ 
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.first__letter {
+  color: rgb(175, 243, 243);
+  text-decoration: underline;
+}
+
+/************** TOGGLE DARK MODE *****************/
+
+.dark-mode {
+  background: rgb(38, 38, 38);
+}
+.dark-mode h1 {
+  color: white;
+}
+
+/************** SEARCH *****************/
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  margin: 0.5rem;
+}
+.search > input {
+  border: none;
+  margin: 0.4rem 0.2rem;
+  padding: 1rem;
+  min-width: 90%;
+}
+
+/************** NOTES *****************/
 
 .notes__list {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   margin: 2rem;
+ 
 }
 
 .note {
-border: none;
-color: black;
-background-color: #f6f6f6;
-border-radius: 1rem;
-padding: 1rem;
-min-height: 10rem;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-transition: all .3s ease-in-out;
-white-space: pre-wrap;
+  border: none;
+  color: black;
+  background-color: #f6f6f6;
+  padding: 1rem;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+  white-space: pre-wrap;
 }
 .note:hover {
   background-color: #fff;
@@ -40,25 +103,15 @@ white-space: pre-wrap;
   justify-content: space-between;
 }
 
-/*************** ADD NOTE *************/
 .note.new {
   background-color: rgb(173, 247, 247);
 }
-textarea {
-  border: none;
-  resize: none;
-  border-radius: .5rem;
-  background-color: rgb(184, 244, 244);
-}
-textarea:focus {
-  outline: none;
-}
+
 .save {
   border: none;
-  padding: .2rem 2rem;
+  padding: 0.2rem 2rem;
   border-radius: 2rem;
 }
-
 
 .note__delete {
   cursor: pointer;
