@@ -18,7 +18,7 @@ body {
 }
 
 .note {
-border: 1px solid;
+border: none;
 color: black;
 background-color: #f6f6f6;
 border-radius: 1rem;
@@ -28,6 +28,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 transition: all .3s ease-in-out;
+white-space: pre-wrap;
 }
 .note:hover {
   background-color: #fff;
@@ -39,3 +40,26 @@ transition: all .3s ease-in-out;
   justify-content: space-between;
 }
 
+/*************** ADD NOTE *************/
+.note.new {
+  background-color: rgb(173, 247, 247);
+}
+textarea {
+  border: none;
+  resize: none;
+  border-radius: .5rem;
+  background-color: rgb(184, 244, 244);
+}
+textarea:focus {
+  outline: none;
+}
+.save {
+  border: none;
+  padding: .2rem 2rem;
+  border-radius: 2rem;
+}
+
+
+.note__delete {
+  cursor: pointer;
+}
