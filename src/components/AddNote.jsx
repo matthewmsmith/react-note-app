@@ -6,18 +6,16 @@ const AddNote = ({ handleAddNote }) => {
   const characterLimit = 200;
 
   const handleChange = (e) => {
-    if(characterLimit - e.target.value.length >=0) {
+    if (characterLimit - e.target.value.length >= 0) {
       setNote(e.target.value);
     }
-   
   };
- 
+
   const handleSaveClick = () => {
-    if(note.trim().length > 0) {
-      handleAddNote(note)
-      setNote('')
+    if (note.trim().length > 0) {
+      handleAddNote(note);
+      setNote("");
     }
-    
   };
 
   return (
